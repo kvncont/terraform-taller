@@ -1,0 +1,36 @@
+{
+	"name": "Ubuntu",
+	"image": "mcr.microsoft.com/devcontainers/base:jammy",
+	"features": {
+		"ghcr.io/devcontainers/features/azure-cli:1": {},
+		"ghcr.io/devcontainers/features/git:1": {},
+		"ghcr.io/devcontainers/features/terraform:1": {},
+		"ghcr.io/dhoeric/features/terraform-docs:1": {},
+		"ghcr.io/dhoeric/features/tfsec:1": {}
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"azapi-vscode.azapi",
+				"hashicorp.terraform",
+				"tfsec.tfsec"
+			],
+			"settings": {
+				"editor.bracketPairColorization.enabled": true,
+				"editor.insertSpaces": true,
+				"editor.detectIndentation": false,
+				"editor.tabSize": 2,
+				"files.encoding": "utf8",
+				"terminal.integrated.scrollback": 20000,
+				"[jsonc]": {
+					"editor.defaultFormatter": "vscode.json-language-features",
+					"editor.tabSize": 4
+				}
+			}
+		}
+	},
+	"mounts": [
+		"source=${localEnv:HOME}${localEnv:USERPROFILE}/.ssh,target=/home/vscode/.ssh,type=bind,consistency=cached"
+	],
+	"remoteUser": "vscode"
+}
