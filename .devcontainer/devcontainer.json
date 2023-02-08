@@ -1,19 +1,17 @@
 {
-	"name": "Ubuntu",
+	"name": "Terraform workshop",
 	"image": "mcr.microsoft.com/devcontainers/base:jammy",
+	"workspaceFolder": "/workspaces/terraform-workshop",
 	"features": {
 		"ghcr.io/devcontainers/features/azure-cli:1": {},
 		"ghcr.io/devcontainers/features/git:1": {},
-		"ghcr.io/devcontainers/features/terraform:1": {},
-		"ghcr.io/dhoeric/features/terraform-docs:1": {},
-		"ghcr.io/dhoeric/features/tfsec:1": {}
+		"ghcr.io/devcontainers/features/terraform:1": {}
 	},
 	"customizations": {
 		"vscode": {
 			"extensions": [
 				"azapi-vscode.azapi",
-				"hashicorp.terraform",
-				"tfsec.tfsec"
+				"hashicorp.terraform"
 			],
 			"settings": {
 				"editor.bracketPairColorization.enabled": true,
